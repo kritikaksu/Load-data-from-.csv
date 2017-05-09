@@ -1,0 +1,13 @@
+import cv2
+import pandas as pd
+import numpy as np
+import sys
+import os
+import random
+
+df = pd.read_csv("train.csv",sep=',')
+gender = df.ix[:,1].as_matrix()
+for row in range(0,2000):
+    imagedata=df.ix[row,3:].as_matrix()
+    img= np.reshape(imagedata,(100,100)
+    image=cv2.imwrite("C:\Users\kriti\Downloads\input\" + 'name' + `row` + '.png', img)
